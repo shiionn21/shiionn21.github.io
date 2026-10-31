@@ -205,7 +205,7 @@
 
   <header>
     <nav class="container">
-      <a href="#inicio" class="logo">&lt;Anderson<span>/</span>&gt;</a>
+      <a href="#inicio" class="logo">Dev<span>-</span>Anderson</a>
       <button class="menu-btn" aria-label="Abrir menu" id="menuBtn">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#sobre">Sobre</a></li>
@@ -503,10 +503,13 @@
     // Se a foto não carregar, mostra as iniciais
     const photo = document.getElementById('photo');
     const fallback = document.getElementById('photoFallback');
-    photo.addEventListener('error', () => {
+    function showFallback() {
       photo.style.display = 'none';
       fallback.style.display = 'flex';
-    });
+    }
+    photo.addEventListener('error', showFallback);
+    // Se a foto já falhou antes do script carregar, o evento 'error' não dispara mais
+    if (photo.complete && photo.naturalWidth === 0) showFallback();
 
     // Efeito de digitação
     const roles = [
