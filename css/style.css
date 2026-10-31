@@ -118,7 +118,7 @@ section:nth-of-type(even) { background: var(--bg-alt); }
 }
 .skill-card:hover { border-color: rgba(45, 212, 191, .5); transform: translateY(-4px); }
 .skill-card h3 { font-size: 1.05rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-.skill-card h3 .ico { font-size: 1.3rem; }
+.skill-card h3 .icon { width: 22px; height: 22px; color: var(--teal); flex-shrink: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   font-size: .8rem; padding: 5px 12px; border-radius: 999px;
@@ -135,7 +135,10 @@ section:nth-of-type(even) { background: var(--bg-alt); }
 }
 .project:hover { border-color: rgba(45, 212, 191, .5); transform: translateY(-4px); }
 .project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.project-ico { font-size: 2rem; }
+.project-top .icon {
+  width: 44px; height: 44px; padding: 10px; border-radius: 12px;
+  color: var(--teal); background: rgba(45, 212, 191, .08); border: 1px solid rgba(45, 212, 191, .25);
+}
 .status { font-size: .75rem; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
 .status.done { background: rgba(45, 212, 191, .12); color: var(--teal); }
 .status.wip { background: rgba(250, 204, 21, .1); color: #facc15; }
